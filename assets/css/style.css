@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background: linear-gradient(#7b68ee,#c33fe7);
+}
+
+/*para acomodar el tamaño de las imagenes en las cards*/
+.card-body{
+    background-color: #ffc107; 
+}
+.card-footer{
+    background: linear-gradient(#ffc107,#29200c);
+} 
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-img-top{
+    min-height: 12rem;
+    object-fit: cover;
+}
+
+/* para acomdar la tabla*/
+.table-stats{
+    padding: 2!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3;
+}
+
+/* Para dar formato al footer y a los iconos del footer*/
+footer{
+    height: 5rem;
+    background: linear-gradient(#c33fe7,#dda0dd);
+}
+.redes svg{
+    padding: 10px;
+    align-items: flex-start;
+    gap: 2px;
+    width: 50px;
+    height: 60px;
+    color: #ffc107; 
+}
+
