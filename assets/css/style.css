@@ -3,16 +3,36 @@
     padding: 0;
 }
 
+header{
+    background-color: #3EECAC;
+background-image: linear-gradient(270deg, #3EECAC 0%, #EE74E1 100%);
+}
+
+.principal{
+    background-image: url(../img/portada.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 15px;
+}
+
 main{
-    background: linear-gradient(#7b68ee,#c33fe7);
+    background-color: #3EECAC;
+    background-image: linear-gradient(270deg, #3EECAC 0%, #EE74E1 100%);
+    min-height: 44rem;
+}
+
+.nav-item:hover {
+    transform: scale(1.15);
 }
 
 /*para acomodar el tamaño de las imagenes en las cards*/
 .card-body{
-    background-color: #ffc107; 
+    background-color: #AA076B; 
 }
 .card-footer{
-    background: linear-gradient(#ffc107,#29200c);
+    background: linear-gradient(#AA076B 0%,#572752);
 } 
 
 .card:hover {
@@ -24,26 +44,92 @@ main{
     object-fit: cover;
 }
 
+
+/* para acomdar mensaje contact*/
+.needs-validation{
+    padding-top: 5rem;
+    max-width: 800px;
+    margin: auto;
+}
+
 /* para acomdar la tabla*/
-.table-stats{
-    padding: 2!important;
+.container-tablas{
+    padding-top: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+#table1{
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 3;
+    border-collapse: separate;
+    border: rgb(150, 11, 168) 5px solid; 
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.903);
 }
 
-/* Para dar formato al footer y a los iconos del footer*/
+#table2{
+    display: flex;
+    flex-direction: column;
+    border-collapse: separate;
+    border: rgb(150, 11, 168) 5px solid; 
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.903);
+}
+
+th{
+    padding: 0.5rem;
+}
+
+td{
+    width: 300px;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #EE74E1;
+}
+
+
+/*para acomodar el tamaño card details*/
+.details{   
+    padding-top: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.card-details{   
+    margin-top: 1rem;
+    background-color: #ec8be2;
+    border: #AA076B solid;
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.903);
+}
+
+.card-tit{
+    font-size: 20px;
+    font-weight: bold;
+    color: #AA076B;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* Para dar formato del footer*/
 footer{
-    height: 5rem;
-    background: linear-gradient(#c33fe7,#dda0dd);
-}
-.redes svg{
-    padding: 10px;
-    align-items: flex-start;
-    gap: 2px;
-    width: 50px;
-    height: 60px;
-    color: #ffc107; 
+    background-color: #3EECAC;
+    background-image: linear-gradient(270deg, #3EECAC 0%, #EE74E1 100%);
+    display: flex;
+    justify-content: space-between;
 }
 
+i{
+    font-size: 30px;
+    color: #AA076B;
+    padding: 5px 5px 5px 15px;
+    gap: 3rem;
+}
+
+#footer-text{
+    font-size: 20px;
+    font-weight: bold;
+    color: #AA076B;
+    padding-right: 30px;
+    gap: 3rem;
+    margin: 0;
+}
