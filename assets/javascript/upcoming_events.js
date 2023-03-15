@@ -48,7 +48,7 @@ function mostrarCards(eventos) {
     return
   }
   let cards = ''
-  for(evento of eventos) {
+  for(let evento of eventos) {
   cards += 
   `<div class="card h-80">
     <img src="${evento.image}" class="card-img-top" alt="Imagen de evento">
