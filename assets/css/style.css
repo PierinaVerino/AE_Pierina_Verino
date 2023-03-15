@@ -58,6 +58,7 @@ main{
     object-fit: cover;
 }
 
+
 /* para acomdar mensaje contact*/
 .needs-validation{
     padding-top: 5rem;
@@ -102,19 +103,13 @@ td{
 
 
 /*para acomodar el tamaño card details*/
-.details{   
-    padding-top: 2rem;
-    max-width: 800px;
-    margin: auto;
-}
-
-.card-details{   
-    margin-top: 1rem;
+#card-Details{   
+    padding: 0.5rem;
+    max-width: 50rem;
     background-color: #ec8be2;
     border: #AA076B solid;
     box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.903);
 }
-
 
 .card-tit{
     font-size: 20px;
@@ -123,6 +118,7 @@ td{
     text-align: center;
     padding: 0.5rem;
 }
+
 
 /* Para dar formato del footer*/
 footer{

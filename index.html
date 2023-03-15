@@ -48,48 +48,17 @@
     </header>
 
     <main>
-
-        <div id="cotenedorCards" class="container-fluid">
-            <div class="row">
-                <div class="col-lg-8 col-s-12 p-2">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Cinema</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Concert</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                        <label class="form-check-label" for="inlineCheckbox3">Party</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-                        <label class="form-check-label" for="inlineCheckbox4">Food Fair</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-                        <label class="form-check-label" for="inlineCheckbox5">Marathon</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
-                        <label class="form-check-label" for="inlineCheckbox5">Museum</label>
-                    </div>
-                </div> 
-                <div class="col-lg-4 col-s-12 p-2">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+        <div class="container-fluid row align-items-baseline justify-content-around">
+            <div class="d-flex col-lg-4 col-s-12 p-2">
+                <input type="text" class="form-control" placeholder="Search">
             </div>
+            
+            <div class="row col-lg-8 col-s-12 p-2">
+                <div id="contenedor-check"> </div>
+            </div>
+            
         </div>
-
+   
         <div id="cards" class="cards row row-cols-1 row-cols-md-4 m-0"></div>
         
     </main>
@@ -110,7 +79,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
     
-    <script src="./assets/javascript/main.js"></script>
+    <script src="./assets/javascript/data.js"></script>
     <script src="./assets/javascript/index.js"></script>
 
 </body>
