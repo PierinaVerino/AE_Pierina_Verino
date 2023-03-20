@@ -1,47 +1,41 @@
-// Filtro de eventos por su nombre
-const nombreEventos = data.events.filter(eventos => eventos.name) 
-console.log(nombreEventos)
+
+// Tomar datos de JSON //
+
+let obtenerDatos;
+
+const obtenerBaseDatos = async ()=> {
+  const respuesta = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
+  obtenerDatos = await respuesta.json()
+  console.log(obtenerDatos);
+
   
-
-// Objeto para cada evento con la info que necesito.
-
-const infoEvento = nombreEventos.map(eventos => {
-   let deta = {}
-   deta._id = eventos._id
-   deta.image = eventos.image
-   deta.name = eventos.name
-   deta.category = eventos.category
-   deta.price = eventos.price
-   deta.description = eventos.description
-   deta.capacity = eventos.capacity
-   deta.place = eventos.place
-   return deta
-})
-
-//console.log(infoEvento)
+  nombreEventos = obtenerDatos.events.filter(eventos => eventos.name) // Filtro de eventos por su nombre
+  console.log(nombreEventos);
 
 
+  infoEvento = nombreEventos.map(eventos => {
+    let deta = {}
+    deta._id = eventos._id
+    deta.image = eventos.image
+    deta.name = eventos.name
+    deta.category = eventos.category
+    deta.price = eventos.price
+    deta.description = eventos.description
+    deta.capacity = eventos.capacity
+    deta.place = eventos.place
+    return deta})                                       // Objeto para cada evento con la info que necesito.
 
-// Empiezo a separarlos segun su ID
+    console.log(infoEvento);
 
-//almacenamos en una variable la cadena de consulta 
-const queryString = location.search
-
-const id = new URLSearchParams(queryString).get("id")
-
-console.log(id)
-
-//Buscar el objeto de correspondiente al "id" y lo almaceno en una variable
-const evento = infoEvento.find(data => data.name === id) 
-
-console.log(evento)
-
-const containerCards = document.getElementById("cardDetails") 
-
-console.log(containerCards)
+    queryString = location.search                      // Empiezo a separarlos segun su ID - almacenamos en una variable la cadena de consulta 
+    id = new URLSearchParams(queryString).get("id");
+    console.log(id);
 
 
-cardDetails.innerHTML = ` 
+    evento = infoEvento.find(obtenerDatos => obtenerDatos.name === id)  //Buscar el objeto de correspondiente al "id" y lo almaceno en una variable
+    console.log(evento);
+
+    cardDetails.innerHTML = ` 
     <div id="card-Details">
         <img src="${evento.image}" class="card-img-top" alt="Imagen de evento">
         <div class="col-12">
@@ -57,4 +51,11 @@ cardDetails.innerHTML = `
                 <p class="card-text col-6">Place: ${evento.place}</p>
             </div>
     </div> 
-`
+    `
+    containerCards = document.getElementById("cardDetails") 
+    console.log(containerCards);
+
+}
+
+obtenerBaseDatos()
+

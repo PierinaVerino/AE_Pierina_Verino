@@ -1,3 +1,20 @@
+// Tomar datos de JSON //
+
+let obtenerDatos;
+
+const obtenerBaseDatos = async ()=> {
+  const respuesta = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
+  obtenerDatos = await respuesta.json()
+  console.log(obtenerDatos);
+  mostrarChecks(obtenerDatos.events);
+  mostrarCards(filtrarFuturos(obtenerDatos.events,obtenerDatos.currentDate)); 
+}
+
+obtenerBaseDatos()
+
+
+
+
 // Funcion para CHECKBOX //
 
 const contenedordeChecks = document.getElementById('contenedor-check');
@@ -17,7 +34,6 @@ function mostrarChecks(eventos) {
   contenedordeChecks.innerHTML = categorycheck
 }
 
-mostrarChecks(data.events)  //Esta es la funcion que crear los CHECKBOXES //
 
 
 
@@ -30,7 +46,7 @@ input.addEventListener('input',totalFiltros)
 contenedordeChecks.addEventListener('change',totalFiltros)
 
 function totalFiltros(){
-  let filtroBuscador = filtrarBuscador(data.events,input.value)
+  let filtroBuscador = filtrarBuscador(filtrarFuturos(obtenerDatos.events,obtenerDatos.currentDate),input.value)
   let filtroCheck = filtrarPorChecks(filtroBuscador)
   mostrarCards(filtroCheck)
 }
@@ -77,7 +93,6 @@ function filtrarFuturos(eventos, fechaHoy){
   return eventosFuturos
 }
 
-mostrarCards(filtrarFuturos(data.events,data.currentDate))
 
 //Funcion para Filtrar //
 

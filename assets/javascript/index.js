@@ -1,3 +1,24 @@
+// Tomar datos de JSON //
+
+//fetch es un ejemplo de API del navegarod
+//La usamos para realizar las peticiones de la informacion
+//las promesas son la formas con las que se trabaja en asincronia
+//cuando la promesa se resuelve en Then digo que va a pasar
+//con Catch capturamos el error
+
+
+let obtenerDatos;
+
+const obtenerBaseDatos = async ()=> {
+  const respuesta = await fetch('https://mindhub-xj03.onrender.com/api/amazing')
+  obtenerDatos = await respuesta.json()
+  console.log(obtenerDatos);
+  mostrarChecks(obtenerDatos.events);
+  mostrarCards(obtenerDatos.events); 
+}
+
+obtenerBaseDatos()
+
 
 // Funcion para CHECKBOX //
 
@@ -18,9 +39,6 @@ function mostrarChecks(eventos) {
   contenedordeChecks.innerHTML = categorycheck
 }
 
-mostrarChecks(data.events)  //Esta es la funcion que crear los CHECKBOXES //
-
-
 
 //Funcion para el BUSCADOR y filtrado de busquedas //
 
@@ -31,7 +49,7 @@ input.addEventListener('input',totalFiltros)
 contenedordeChecks.addEventListener('change',totalFiltros)
 
 function totalFiltros(){
-  let filtroBuscador = filtrarBuscador(data.events,input.value)
+  let filtroBuscador = filtrarBuscador(obtenerDatos.events,input.value)
   let filtroCheck = filtrarPorChecks(filtroBuscador)
   mostrarCards(filtroCheck)
 }
@@ -66,9 +84,6 @@ function mostrarCards(eventos) {
 divCards.innerHTML = cards;
 }
        
-mostrarCards(data.events)  //Esta es la funcion que crear las CARDS //
-
-
 
 //Funcion para Filtrar //
 
