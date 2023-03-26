@@ -69,9 +69,9 @@ function mostrarCards(eventos) {
   `<div class="card h-80">
     <img src="${evento.image}" class="card-img-top" alt="Imagen de evento">
     <div class="card-body">
-    <h5 class="card-title">${evento.name}</h5>
-    <p class="card-text">${evento.description}</p>
-    <p class="card-text">${evento.date}</p>
+    <h5 class="card-t">${evento.name}</h5>
+    <p class="card-t">${evento.description}</p>
+    <p class="card-t">${evento.date}</p>
     </div>
     <div class="card-footer d-flex justify-content-evenly">
     <h1 class="card-title pricing-card-title fs-s-5">${evento.price}<small class="text-muted fw-light">/usd</small></h1>
